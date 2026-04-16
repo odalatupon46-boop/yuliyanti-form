@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Data Mahasiswa</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f2f2f2;
+        }
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        /* Dibatasi agar tidak terlalu panjang */
+        input, select, textarea {
+            width: 90%;
+            padding: 8px;
+            margin-top: 5px;
+            font-family: sans-serif;
+        }
+
+        .radio-group {
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 15px;
+            width: 95%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-family: sans-serif;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+
+        /* Biar isi form agak ke tengah */
+        .form-group {
+            text-align: center;
+        }
+
+        label {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Form Data Mahasiswa</h2>
+    <form class="form-group">
+
+        <label>Nama:</label>
+        <input type="text" name="nama"
+               placeholder="Masukkan nama lengkap"
+               required>
+
+        <label>NIM:</label>
+        <input type="text" name="nim"
+               placeholder="Masukkan NIM"
+               required>
+
+        <label>Jurusan:</label>
+        <select name="jurusan" required>
+            <option value="">-- Pilih Jurusan --</option>
+            <option>Informatika-A</option>
+            <option>Informatika-B</option>
+            <option>Informatika-C</option>
+        </select>
+
+        <label>Jenis Kelamin:</label>
+        <div class="radio-group">
+            <input type="radio" name="jk" value="Laki-laki" required> Laki-laki
+            <input type="radio" name="jk" value="Perempuan"> Perempuan
+        </div>
+
+        <label>Alamat Email:</label>
+        <textarea name="alamat email"
+                  placeholder="Masukkan alamat email"
+                  required></textarea>
+
+        <button type="submit">Kirim</button>
+
+    </form>
+</div>
+
+</body>
+</html>
